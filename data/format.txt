@@ -1,0 +1,11 @@
+commodities:
+ID     name     price    releaseTime    sellerID    count    state
+M001 Pencil 10.0 2024-4-19 U001 10 0
+
+orders:
+ID commoID price count time sellerID buyerID
+T001 M001 10.0 10 2024-4-19 U001 U002
+
+users:
+ID name password phonenumber address ballance state
+U001 Alice 123456 911 NJU 100.0 1

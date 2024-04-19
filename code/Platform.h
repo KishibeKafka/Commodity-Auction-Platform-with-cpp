@@ -13,6 +13,7 @@ class Administrator
 {
     string adminName;      // admin
     string adminPassword;  // 123456
+    friend class Platform;
 public:
     Administrator() : adminName("admin"), adminPassword("123456") {}
     void viewCommoList();      // 查看商品列表
@@ -36,5 +37,5 @@ public:
     bool adminLogin();
     bool userRegister();
     bool userLogin();
-    void end();
+    bool end();
 };
