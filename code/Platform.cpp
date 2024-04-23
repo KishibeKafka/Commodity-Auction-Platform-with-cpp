@@ -20,6 +20,7 @@ void Platform::start()
         cout << "Please Enter number: ";
         char op;
         cin >> op;
+        system("cls");
         switch (op)
         {
         case '1': adminLogin(); break;
@@ -52,12 +53,43 @@ bool Platform::adminLogin()
         return 0;
     }
     // excute
+    while (true)
+    {
+        cout
+            << "1.view commodities 2.search commodities 3.unrelease commodities"
+            << " 4.view orders 5.view users 6.ban user 7.logout" << endl;
+        cout << "Please enter number: ";
+        char op;
+        cin >> op;
+        system("cls");
+        switch (op)
+        {
+        case '1': admin.viewCommoList(); break;
+        case '2': admin.searchCommodity(); break;
+        case '3': admin.unreleaseCommo(); break;
+        case '4': admin.checkOrderHistory(); break;
+        case '5': admin.viewUserList(); break;
+        case '6': admin.banUser(); break;
+        case '7': return 1;
+        default:
+            cout << "Invalid Input!" << endl;
+            cout << "press any key...";
+            cin >> op;
+        }
+        system("cls");
+    }
     return 1;
 }
 
-bool Platform::userRegister() {}
+bool Platform::userRegister()
+{
+    return 0;
+}
 
-bool Platform::userLogin() {}
+bool Platform::userLogin()
+{
+    return 0;
+}
 
 bool Platform::end()
 {

@@ -11,6 +11,7 @@ const regex reg_address("[A-Za-z]{1,40}");
 
 class User
 {
+    static int number;
     string userID;       // form: U001
     string username;     // [A-Za-z]{1,10};
     string password;     // [a-z0-9]{1,20};
